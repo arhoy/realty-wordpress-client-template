@@ -47,6 +47,12 @@ const ContentContainer = styled.div`
 `;
 
 export const Property = ({ property }) => {
+  const price = new Intl.NumberFormat('en-CA', {
+    style: 'currency',
+    currency: property.currency,
+  })
+    .format(property.listedprice)
+    .slice(0, -3);
   return (
     <Container to={`/${property.slug}`}>
       <ImageContainer>
@@ -73,7 +79,7 @@ export const Property = ({ property }) => {
           </div>
         </div>
         <div className="row price">
-          <span>${property.listedprice}</span>
+          <span>{price}</span>
           <button> Get Tour </button>
         </div>
       </ContentContainer>

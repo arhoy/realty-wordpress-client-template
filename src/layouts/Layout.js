@@ -64,7 +64,7 @@ const NavContainer = styled.header`
 `;
 
 const Main = styled.main`
-  grid-column: center-start/center-end;
+  grid-column: full-start/full-end;
 `;
 
 const FooterContainer = styled.footer`

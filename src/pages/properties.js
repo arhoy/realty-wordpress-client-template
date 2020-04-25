@@ -19,6 +19,7 @@ export const query = graphql`
           address
           listedprice
           mainimage
+          currency
         }
       }
     }
