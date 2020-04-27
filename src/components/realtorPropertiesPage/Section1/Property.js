@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { NoStyleLink } from '../../resusableStyles/Links/LinkStyles';
+import { formatPrice } from '../../../utils/propertyHelpers';
 
 const Container = styled(NoStyleLink)`
   margin: 1rem;
@@ -47,14 +48,8 @@ const ContentContainer = styled.div`
 `;
 
 export const Property = ({ property }) => {
-  const price = new Intl.NumberFormat('en-CA', {
-    style: 'currency',
-    currency: property.currency,
-  })
-    .format(property.listedprice)
-    .slice(0, -3);
   return (
-    <Container to={`/${property.slug}`}>
+    <Container to={`/properties/${property.slug}`}>
       <ImageContainer>
         <img src={property.mainimage} />
       </ImageContainer>
@@ -79,7 +74,7 @@ export const Property = ({ property }) => {
           </div>
         </div>
         <div className="row price">
-          <span>{price}</span>
+          <span>{formatPrice(property.listedprice, property.currency)}</span>
           <button> Get Tour </button>
         </div>
       </ContentContainer>

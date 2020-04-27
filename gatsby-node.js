@@ -22,7 +22,7 @@ exports.createPages = async ({ graphql, actions }) => {
   result.data.allWordpressPage.nodes.forEach((node) => {
     createPage({
       // `path` will be the url for the page
-      path: node.acf.slug,
+      path: `properties/${node.acf.slug}`,
       // specify the component template of your choice
       component: slash(pageTemplate),
       // In the ^template's GraphQL query, 'id' will be available

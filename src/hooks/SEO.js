@@ -34,6 +34,7 @@ function SEO({ description, lang, meta, title }) {
       }}
       title={title}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
+      defer={false}
       meta={[
         {
           name: `description`,
@@ -68,7 +69,12 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
       ].concat(meta)}
-    />
+    >
+      <link
+        rel="stylesheet"
+        href="https://unpkg.com/swiper/css/swiper.min.css"
+      ></link>
+    </Helmet>
   );
 }
 

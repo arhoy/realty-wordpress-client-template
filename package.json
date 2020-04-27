@@ -1,15 +1,17 @@
 {
   "name": "gatsby-starter-default",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "A WordPress CMS with Gatsby and Algolia Powered Search For Realtors",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Alex Quasar <contact@codepaper.dev>",
   "dependencies": {
     "@emotion/core": "^10.0.28",
     "@emotion/styled": "^10.0.27",
+    "algoliasearch": "^4.2.0",
     "emotion-theming": "^10.0.27",
     "gatsby": "^2.20.25",
     "gatsby-image": "^2.3.4",
+    "gatsby-plugin-algolia": "^0.9.0",
     "gatsby-plugin-emotion": "^4.2.2",
     "gatsby-plugin-google-analytics": "^2.2.4",
     "gatsby-plugin-google-fonts": "^1.0.1",
@@ -24,7 +26,15 @@
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-helmet": "^6.0.0"
+    "react-helmet": "^6.0.0",
+    "react-icons": "^3.10.0",
+    "react-id-swiper": "^3.0.0",
+    "react-instantsearch": "^6.4.0",
+    "react-instantsearch-dom": "^6.4.0",
+    "react-slick": "^0.25.2",
+    "rheostat": "^4.1.1",
+    "slick-carousel": "^1.8.1",
+    "swiper": "^5.3.8"
   },
   "devDependencies": {
     "prettier": "2.0.4"

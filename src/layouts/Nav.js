@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { Link } from 'gatsby';
+import { NoStyleLink } from '../components/resusableStyles/Links/LinkStyles';
 
 const Container = styled.div`
   background: ${(props) => props.theme.colors.lightgrey};
@@ -34,7 +35,10 @@ const Logo = styled.div`
 export const Nav = () => {
   return (
     <Container>
-      <Logo>Starter Theme</Logo>
+      <NoStyleLink to="/">
+        <Logo>Austin Dundiel</Logo>
+      </NoStyleLink>
+
       <Links>
         <NavLink to="/">Home</NavLink>
         <NavLink to="/properties">Properties</NavLink>

@@ -2,6 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import styled from '@emotion/styled';
 import Layout from '../layouts/Layout';
+import { Button } from '../components/resusableStyles/Buttons/Buttons';
 
 const IMAGE_HEIGHT = '30rem';
 
@@ -105,32 +106,6 @@ const PropertyInfoContainer = styled.div`
   }
   & .contact {
     margin-top: 1rem;
-    & .phone {
-      text-decoration: none;
-      border: none;
-      outline: none;
-      padding: 1rem 2rem;
-      background: rgb(111, 0, 4);
-      border-radius: 10px;
-      background: radial-gradient(
-        circle,
-        rgba(111, 0, 4, 1) 0%,
-        rgba(122, 0, 0, 1) 66%,
-        rgba(40, 7, 3, 1) 100%
-      );
-      color: ${(props) => props.theme.colors.white};
-      font-weight: bold;
-      text-transform: uppercase;
-      cursor: pointer;
-      &:hover {
-        transition: all 0.2s ease-in;
-        background: radial-gradient(
-          circle,
-          rgba(40, 7, 3, 1) 0%,
-          rgba(122, 0, 0, 1) 66%,
-          rgba(111, 0, 4, 1) 100%
-        );
-      }
     }
   }
 `;
@@ -272,7 +247,7 @@ const PropertyPage = (props) => {
               </ul>
               <div className="contact">
                 <a className="phone" href={`tel:+1${phone}`}>
-                  Contact Realtor
+                  <Button>Contact Realtor</Button>
                 </a>
               </div>
             </div>

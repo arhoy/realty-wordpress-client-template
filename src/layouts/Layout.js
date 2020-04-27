@@ -87,12 +87,21 @@ const Layout = ({ children }) => {
           body,
           html {
             position: relative;
+
             background: ${white};
             max-width: 100%;
             overflow-x: hidden;
             width: 100%;
             margin: 0;
             font-family: Poppins, Helvetica, Arial, sans-serif;
+          }
+          html {
+            @media (max-width: 600px) {
+              font-size: 90%;
+            }
+            @media (max-width: 400px) {
+              font-size: 85%;
+            }
           }
         `}
       />
