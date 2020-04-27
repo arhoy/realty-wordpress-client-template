@@ -6,10 +6,6 @@ import SEO from '../hooks/SEO';
 import { Section0 } from '../components/_indexPage/Section0/Section0';
 import { SectionSearch } from '../components/_indexPage/SectionSearch/_SectionSearch';
 import { Section1 } from '../components/_indexPage/Section1/_Section1';
-
-// slick carousel css
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
 import { Section3 } from '../components/_indexPage/Section3/Section3';
 
 export const query = graphql`
