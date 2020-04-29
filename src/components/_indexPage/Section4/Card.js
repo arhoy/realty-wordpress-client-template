@@ -17,7 +17,9 @@ const Container = styled.div`
   max-width: 1500px;
   margin: 2rem auto;
   @media (max-width: ${(props) => props.theme.screenSize.eightHundred}) {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column-reverse;
+
     padding: 0;
     margin: 0;
     box-shadow: none;
@@ -58,7 +60,7 @@ const ContentContainer = styled.div`
 const ImageContainer = styled.div`
   height: 30rem;
   object-fit: cover;
-  clip-path: polygon(0 0, 100% 0, 79% 100%, 0% 100%);
+  clip-path: polygon(20% 1%, 100% 0, 100% 100%, 0% 100%);
   @media (max-width: 600px) {
     clip-path: unset;
     height: 20rem;
@@ -82,20 +84,16 @@ const HeroImage = styled(Image)`
 export const About = ({ fluid }) => {
   return (
     <Container>
-      <ImageContainer>
-        <HeroImage fluid={fluid} />
-      </ImageContainer>
       <ContentContainer>
-        <h2>First Home Buyers Welcome</h2>
+        <h2>Looking to Relocate</h2>
         <p> You’re thinking about buying your first home. Exciting time!</p>
         <p>
-          Along with all this excititement, you are probably feeling anxious and
-          nervous too, but I am here to help you every step of the way with your
-          life's greatest investment.
+          Interested in knowing if now is the right market? As a realtor I want
+          to help you find the right location for you and your family. Don't
+          rush into things, I am here to explore and provide all the options
+          that you have
         </p>
-        <p>
-          Find out about my ten step full proof process for first time buyers
-        </p>
+        <p>I'm ready to help you fullfill your location needs</p>
 
         <div style={{ display: 'flex', flexWrap: 'wrap' }}>
           <ButtonExternal
@@ -104,13 +102,16 @@ export const About = ({ fluid }) => {
             href={calendly}
             style={{ marginRight: '4px' }}
           >
-            Learn More
+            Schedule Call
           </ButtonExternal>
           <ButtonExternal className="phone" href={`tel:+1${phone}`}>
             Call: {phonedisplay}
           </ButtonExternal>
         </div>
       </ContentContainer>
+      <ImageContainer>
+        <HeroImage fluid={fluid} />
+      </ImageContainer>
     </Container>
   );
 };

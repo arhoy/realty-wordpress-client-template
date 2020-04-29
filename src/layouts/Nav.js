@@ -29,6 +29,7 @@ const NavLink = styled(Link)`
 
 const Logo = styled.div`
   text-transform: uppercase;
+  font-weight: bold;
   margin: 0 0.5rem;
 `;
 

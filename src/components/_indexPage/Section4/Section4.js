@@ -4,11 +4,10 @@ import { About } from './Card';
 import styled from '@emotion/styled';
 
 const Section = styled.div`
-  margin: 3rem 1rem;
-  margin-bottom: 6rem;
+  margin: 6rem 1rem;
 `;
 
-export const Section3 = ({ fluid }) => {
+export const Section4 = ({ fluid }) => {
   return (
     <Section>
       <About fluid={fluid} />

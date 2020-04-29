@@ -7,7 +7,7 @@ import { Section0 } from '../components/_indexPage/Section0/Section0';
 import { SectionSearch } from '../components/_indexPage/SectionSearch/_SectionSearch';
 import { Section1 } from '../components/_indexPage/Section1/_Section1';
 import { Section3 } from '../components/_indexPage/Section3/Section3';
-
+import { Section4 } from '../components/_indexPage/Section4/Section4';
 export const query = graphql`
   {
     seo: file(relativePath: { eq: "seo/contact.png" }) {
@@ -26,6 +26,13 @@ export const query = graphql`
       }
     }
     card1: file(relativePath: { eq: "index/card1.jpg" }) {
+      childImageSharp {
+        fluid(quality: 100, maxWidth: 1000) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    card2: file(relativePath: { eq: "index/card2.jpg" }) {
       childImageSharp {
         fluid(quality: 100, maxWidth: 1000) {
           ...GatsbyImageSharpFluid_withWebp
@@ -65,6 +72,7 @@ const IndexPage = ({ data }) => {
       <Section1 properties={data.properties.nodes} />
 
       <Section3 fluid={data.card1.childImageSharp.fluid} />
+      <Section4 fluid={data.card2.childImageSharp.fluid} />
     </Layout>
   );
 };

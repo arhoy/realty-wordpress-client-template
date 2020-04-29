@@ -1,15 +1,19 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import Image from 'gatsby-image';
-import { Button } from '../../resusableStyles/Buttons/Buttons';
+
 import { NoStyleLink } from '../../resusableStyles/Links/LinkStyles';
+import { realtorContact } from '../../../constants/realtordata';
+import { ButtonExternal } from '../../resusableStyles/Buttons/Buttons';
+
+const { calendly } = realtorContact;
 
 const Container = styled.div`
   background: ${(props) => props.theme.colors.white};
 
   box-shadow: 5px 5px 25px rgba(118, 118, 118, 0.15);
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 10fr 6fr;
   grid-gap: 1rem;
   max-width: 1500px;
   margin: 2rem auto;
@@ -26,7 +30,8 @@ const ContentContainer = styled.div`
   line-height: 30px;
   font-weight: 500;
   max-width: 600px;
-  padding: 4rem;
+  padding: 2rem;
+  height: min-content;
   @media (max-width: 900px) {
     padding: 1rem;
   }
@@ -40,22 +45,11 @@ const ContentContainer = styled.div`
     font-size: 1.2rem;
     opacity: 0.8;
   }
-  & button {
-    background: ${(props) => props.theme.colors.primary};
-    color: ${(props) => props.theme.colors.white};
-    border: none;
-    outline: none;
-    padding: 10px 15px;
-    border-radius: 4px;
-    cursor: pointer;
-    text-transform: uppercase;
-  }
 `;
 
 const ImageContainer = styled.div`
-  height: 40rem;
-  width: auto;
   object-fit: cover;
+  overflow: hidden;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 28% 100%);
   @media (max-width: 600px) {
     clip-path: unset;
@@ -94,9 +88,15 @@ export const About = ({ fluid }) => {
           If you are ready to start your home buying journey I'm excited and
           ready to make it happen
         </p>
-        <NoStyleLink to="/">
-          <Button>Let's Chat</Button>
-        </NoStyleLink>
+
+        <ButtonExternal
+          className="calendly"
+          rel="noreferral nofollow"
+          href={calendly}
+          style={{ marginRight: '4px' }}
+        >
+          Let's Chat
+        </ButtonExternal>
       </ContentContainer>
       <ImageContainer>
         <HeroImage fluid={fluid} />

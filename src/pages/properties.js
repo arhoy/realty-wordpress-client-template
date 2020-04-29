@@ -3,6 +3,7 @@ import { graphql } from 'gatsby';
 import Layout from '../layouts/Layout';
 import SEO from '../hooks/SEO';
 import { Section1 } from '../components/realtorPropertiesPage/Section1/_Section1';
+import { SectionSearch } from '../components/_indexPage/SectionSearch/_SectionSearch';
 
 export const query = graphql`
   {
@@ -34,6 +35,7 @@ const RealtorPropertiesPage = ({ data }) => {
         title="Realtor Properties"
         description="Realtor properties for our site"
       />
+      <SectionSearch />
       <Section1 properties={properties} />
     </Layout>
   );

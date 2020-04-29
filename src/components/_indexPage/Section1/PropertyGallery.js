@@ -62,6 +62,10 @@ export const PropertyGallery = ({ properties }) => {
         slidesPerView: 1,
         spaceBetween: 5,
       },
+      100: {
+        slidesPerView: 1,
+        spaceBetween: 0,
+      },
     },
   };
 

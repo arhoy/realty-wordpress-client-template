@@ -26,7 +26,7 @@ export const Section1 = ({ properties }) => {
       <TitleContainer>
         <h2>View My Featured Listings</h2>
         <NoStyleLink to="/properties">
-          <Button>View All</Button>
+          <Button to="/properties">View All</Button>
         </NoStyleLink>
       </TitleContainer>
 

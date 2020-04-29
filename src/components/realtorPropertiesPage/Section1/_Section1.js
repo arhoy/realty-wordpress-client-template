@@ -9,7 +9,7 @@ const Section = styled.div`
 export const Section1 = ({ properties }) => {
   return (
     <Section>
-      <Properties properties={properties} />;
+      <Properties properties={properties} />
     </Section>
   );
 };
