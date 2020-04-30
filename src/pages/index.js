@@ -8,6 +8,7 @@ import { SectionSearch } from '../components/_indexPage/SectionSearch/_SectionSe
 import { Section1 } from '../components/_indexPage/Section1/_Section1';
 import { Section3 } from '../components/_indexPage/Section3/Section3';
 import { Section4 } from '../components/_indexPage/Section4/Section4';
+import { Section5 } from '../components/_indexPage/Section5/_Section5';
 export const query = graphql`
   {
     seo: file(relativePath: { eq: "seo/contact.png" }) {
@@ -55,6 +56,18 @@ export const query = graphql`
         }
       }
     }
+    reviews: allWordpressPost {
+      nodes {
+        acf {
+          title
+          description
+          name_of_reviewer
+          backgroundimage {
+            source_url
+          }
+        }
+      }
+    }
   }
 `;
 
@@ -73,6 +86,7 @@ const IndexPage = ({ data }) => {
 
       <Section3 fluid={data.card1.childImageSharp.fluid} />
       <Section4 fluid={data.card2.childImageSharp.fluid} />
+      <Section5 reviews={data.reviews.nodes} />
     </Layout>
   );
 };

@@ -11,7 +11,10 @@ import { realtorContact, realtorSocial } from '../constants/realtordata';
 const { phone, phonedisplay, email } = realtorContact;
 const { twitter, instagram, facebook } = realtorSocial;
 
-const Section = styled.div``;
+const Section = styled.div`
+  margin: 1rem 0;
+  display: block;
+`;
 
 const Container = styled.div`
   color: ${(props) => props.theme.colors.white};
