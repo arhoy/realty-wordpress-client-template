@@ -18,6 +18,7 @@ const algoliaQuery = `
           address
           city
           listedprice
+          mainimage
         }
       }
     }

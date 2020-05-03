@@ -30,18 +30,14 @@ const CustomLink = styled(NoStyleLink)`
       font-weight: 700;
     }
   }
-  & img {
-    width: 200px;
-    object-fit: cover;
-    height: 150px;
-  }
+
   & h4 {
     font-weight: 400;
   }
 `;
 
 const PropertySearchPreview = ({ hit }) => {
-  console.log('hit', hit);
+  console.log('hit', hit.acf);
   const MAX_RETURN = 9;
 
   if (hit && hit.__position <= MAX_RETURN) {
@@ -58,7 +54,10 @@ const PropertySearchPreview = ({ hit }) => {
               </h4>
             </div>
 
-            <img src={hit.acf.mainimage} />
+            <img
+              style={{ width: '200px', height: '150px', objectFit: 'cover' }}
+              src={hit.acf.mainimage}
+            />
           </CustomLink>
         )}
       </Container>
